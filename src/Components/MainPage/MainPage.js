@@ -33,9 +33,11 @@ const MainPage = () => {
           value={userInput}
           onChange={searchHandler}
         ></TextField>
+        <p>
+          <input type="submit" value="Search" class="submit-btn" />
+        </p>
       </form>
-
-      <div class="history-button">
+      {/* <div class="history-button">
         <Button
           variant="contained"
           href="#contained-buttons"
@@ -45,7 +47,7 @@ const MainPage = () => {
         >
           History
         </Button>
-      </div>
+      </div> */}
     </Box>
   );
 };

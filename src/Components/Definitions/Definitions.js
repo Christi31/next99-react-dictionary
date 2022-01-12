@@ -34,7 +34,7 @@ const Definitions = () => {
           <ArrowBack onClick={history.goBack}></ArrowBack>
         </span>
       </IconButton>
-      <Button
+      {/* <Button
         className="history-button"
         variant="contained"
         href="#contained-buttons"
@@ -43,7 +43,7 @@ const Definitions = () => {
         startIcon={<History />}
       >
         History
-      </Button>
+      </Button> */}
       <Box className="word-box">
         <Typography className="user-input" variant="h4">
           {userInput}{" "}
