@@ -1,0 +1,21 @@
+.mainpage-box {
+  border: 1px solid rgb(143, 143, 143);
+  margin: 50px;
+  padding: 20px;
+  text-align: center;
+  background-color: rgb(51, 189, 231);
+  border-radius: 5px;
+  height: 50vh;
+}
+.heading {
+  font-size: 60px;
+
+  font-weight: 800;
+  margin-bottom: 50px;
+}
+.history-button {
+  margin: 40px;
+}
+.search-button {
+  margin-left: 5px;
+}
