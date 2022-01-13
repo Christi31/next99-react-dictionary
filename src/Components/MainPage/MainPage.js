@@ -18,6 +18,7 @@ const MainPage = () => {
       setUserInput("");
       return;
     }
+
     console.log("search word");
     history.push(`/search/${userInput}`);
     setUserInput("");

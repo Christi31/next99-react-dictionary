@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Typography, Box, IconButton, Button } from "@material-ui/core";
 import { ArrowBack, VolumeUp } from "@material-ui/icons";
 import { History } from "@material-ui/icons";
-import { PlayCircleFilled } from "@material-ui/icons";
 import { useParams, useHistory } from "react-router-dom";
 import axios from "axios";
 
@@ -11,6 +10,14 @@ const Definitions = () => {
   const { userInput } = useParams();
   const history = useHistory();
   const [definitions, setDefinitions] = useState("");
+  const storeInLocalStorage = (definitions) => {
+    if (localStorage.getItem("wordFromStorage") === null) {
+      localStorage.setItem("wordFromStorage", JSON.stringify(definitions));
+    }
+
+    console.log(JSON.parse(localStorage.getItem("wordFromStorage")));
+  };
+
   console.log(definitions);
   const playAudio = () => {
     let audio = new Audio(definitions.phonetics[0].audio);
@@ -23,6 +30,7 @@ const Definitions = () => {
         `https://api.dictionaryapi.dev/api/v2/entries/en/${userInput}`
       );
       setDefinitions(response.data[0]);
+      storeInLocalStorage(response.data);
     };
     meanings();
   }, []);
