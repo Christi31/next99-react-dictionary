@@ -15,7 +15,7 @@ React js version 17.0.2
 #### Compatibility: Mobile, Desktop, Tablet
 
 #### How to run this code? 
-        1.Clone the repository in your local machine - 
+        1.Clone the repository in your local machine - https://github.com/Christi31/next99-react-dictionary.git
         2.Install Visual studio code, node js version >16,npm. 
         3.After that run `npx create-react-app my-app` command. 
         4.That's all! You get your react app with the folder named my-app.
