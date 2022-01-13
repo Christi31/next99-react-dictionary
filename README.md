@@ -1,4 +1,4 @@
-Dictionary App
+Dictionary App:
  Dictionay app where you can get meaning of any word, listen to its pronounciation and save the searched words.
  
  Technology Used:
