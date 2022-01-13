@@ -2,10 +2,10 @@
 
 Author: Christina Mary
 
-Dictionay app, where you can get meaning of any word, listen to its pronounciation and save the searched words. Three pages are designed and navigation done by React-Router. The pages are Main page for searching the word, Definitions page for showing meanings of the enter word and History page for showing the history of words with their meanings.
+    Dictionay app, where you can get meaning of any word, listen to its pronounciation and save the searched words. Three pages are designed and navigation done by React-Router. The pages are Main page for searching the word, Definitions page for showing meanings of the enter word and History page for showing the history of words with their meanings.
  
 #### Technology Used:
-React js version 17.0.2
+    React js version 17.0.2
  
 #### Libraries Used:
      1.Material-UI  -  React UI library
