@@ -1,11 +1,9 @@
 import React from "react";
 import { BrowserRouter as Routes, Route } from "react-router-dom";
-import { CssBaseline, Divider } from "@material-ui/core";
-
+import { CssBaseline } from "@material-ui/core";
 import MainPage from "./Components/MainPage/MainPage";
 import HistoryPage from "./Components/HistoryPage/HistoryPage";
 import Definitions from "./Components/Definitions/Definitions";
-import "./App.css";
 
 function App() {
   return (

@@ -8,15 +8,19 @@ const HistoryPage = () => {
   const [histories, setHistories] = useState(
     JSON.parse(localStorage.getItem("wordFromStorage"))
   );
+  // Navigation to main-page using React-router
   const goToSearch = () => {
     history.push(`/`);
   };
+  // Delete button
   const deleteHistory = () => {
     setHistories(undefined);
     localStorage.removeItem("wordFromStorage");
   };
   return (
     <div className="history-page-box">
+      {/* History page UI */}
+      {/* Fetching data */}
       {histories &&
         histories.map((a, index) => (
           <div className="borderStyle" key={index}>
@@ -33,7 +37,7 @@ const HistoryPage = () => {
             <div>{a.meanings[0].definitions[0].example}</div>
           </div>
         ))}
-      {!histories && <h2>there is no data to display.</h2>}
+      {!histories && <h2>No data to display.</h2>}
       <div className="buttons">
         <Button
           variant="contained"

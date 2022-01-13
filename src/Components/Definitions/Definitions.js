@@ -4,32 +4,15 @@ import { ArrowBack, VolumeUp } from "@material-ui/icons";
 import { History } from "@material-ui/icons";
 import { useParams, useHistory } from "react-router-dom";
 import axios from "axios";
-
 import "./Definitions.css";
+
 const Definitions = () => {
+  //React-Router hooks
   const { userInput } = useParams();
   const history = useHistory();
+  // React hooks
   const [definitions, setDefinitions] = useState("");
-  const storeInLocalStorage = (definition) => {
-    if (localStorage.getItem("wordFromStorage") === null) {
-      localStorage.setItem("wordFromStorage", JSON.stringify(definition));
-    } else {
-      let a = JSON.parse(localStorage.getItem("wordFromStorage"));
-      a.push(definition[0]);
-      localStorage.setItem("wordFromStorage", JSON.stringify(a));
-    }
-
-    console.log(JSON.parse(localStorage.getItem("wordFromStorage")));
-  };
-  const goToHistory = () => {
-    history.push(`/HistoryPage`);
-  };
-  console.log(definitions);
-  const playAudio = () => {
-    let audio = new Audio(definitions.phonetics[0].audio);
-    audio.play();
-  };
-  let a = [];
+  // Fetch data from API
   useEffect(() => {
     const meanings = async () => {
       const response = await axios.get(
@@ -40,8 +23,33 @@ const Definitions = () => {
     };
     meanings();
   }, []);
+  // Storing the userInput and result for history
+  const storeInLocalStorage = (definition) => {
+    if (localStorage.getItem("wordFromStorage") === null) {
+      localStorage.setItem("wordFromStorage", JSON.stringify(definition));
+    } else {
+      let dataFromLocalStorage = JSON.parse(
+        localStorage.getItem("wordFromStorage")
+      );
+      dataFromLocalStorage.push(definition[0]);
+      localStorage.setItem(
+        "wordFromStorage",
+        JSON.stringify(dataFromLocalStorage)
+      );
+    }
+  };
+  // Navigation to history page using React-Router
+  const goToHistory = () => {
+    history.push(`/HistoryPage`);
+  };
+  // To get the pronounciation audio
+  const playAudio = () => {
+    let audio = new Audio(definitions.phonetics[0].audio);
+    audio.play();
+  };
 
   return (
+    // Definitions UI
     <Box className="Definitions-box">
       <IconButton className="back-arrow">
         <span class="pointer">
@@ -70,6 +78,7 @@ const Definitions = () => {
           ></VolumeUp>
         </Typography>
       </Box>
+      {/* Showing the results got from API */}
       {definitions && (
         <div>
           <h4>Parts of speech:</h4>
