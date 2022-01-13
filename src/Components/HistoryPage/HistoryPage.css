@@ -1,0 +1,19 @@
+.borderStyle {
+  border-bottom: 1px solid rgb(77, 78, 77);
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.history-page-box {
+  border: 1px solid rgb(143, 143, 143);
+  margin: 50px;
+  padding: 20px;
+  background-color: rgb(145, 220, 243);
+  border-radius: 5px;
+}
+.back-button {
+  margin-right: 50px !important;
+}
+.buttons {
+  margin-top: 20px;
+}

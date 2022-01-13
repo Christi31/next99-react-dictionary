@@ -10,6 +10,9 @@ const MainPage = () => {
     setUserInput(event.target.value);
     console.log(event.target.value);
   };
+  const goToHistory = () => {
+    history.push(`/HistoryPage`);
+  };
   const submitHandler = (event) => {
     event.preventDefault();
 
@@ -38,17 +41,18 @@ const MainPage = () => {
           <input type="submit" value="Search" class="submit-btn" />
         </p>
       </form>
-      {/* <div class="history-button">
+      <div class="history-button">
         <Button
           variant="contained"
           href="#contained-buttons"
           color="default"
           size="large"
+          onClick={goToHistory}
           startIcon={<History />}
         >
           History
         </Button>
-      </div> */}
+      </div>
     </Box>
   );
 };
