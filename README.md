@@ -8,9 +8,9 @@ Dictionay app, where you can get meaning of any word, listen to its pronounciati
 React js version 17.0.2
  
 #### Libraries Used:
-1.Material-UI  -  React UI library
-2.React-Router -  Standard library for routing in React. 
-3.axios        -  Used for Data Fetching
+     1.Material-UI  -  React UI library
+     2.React-Router -  Standard library for routing in React. 
+     3.axios        -  Used for Data Fetching
  
 #### Compatibility: Mobile, Desktop, Tablet
 
